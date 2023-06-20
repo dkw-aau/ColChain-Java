@@ -6,4 +6,5 @@ ADD . .
 
 RUN mvn compile assembly:single
 
-ENTRYPOINT [ "java", "-jar", "/app/target/colchain.jar", "/app/config.json" ]
+ENTRYPOINT [ "java", "-jar", "/app/target/colchain.jar" ]
+CMD [ "/app/config.json" ]
