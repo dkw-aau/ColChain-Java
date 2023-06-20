@@ -6,6 +6,7 @@ ColChain is a new unstructured Peer-to-Peer architecture for sharing and queryin
 	* [Build](#build)
 	* [Deploy](#deploy)
 	* [Setup](#setup)
+	* [Docker](#docker)
 * [Status](#status)
 * [Running Experiments](#running-experiments)
 # Abstract
@@ -67,6 +68,19 @@ To deploy in an application server, use the WAR file. Create an `config.json` co
 ### Setup
 Once the node is started, go to the web interface by opening a Web browser and navigating to the URL, e.g., `http://colchain.org:8080/`. Enter the path to the config file in the Web interface (1st form from the top), e.g., `/path/to/config.json` and hit `Initiate`.
 For experimental setup of a node, refer to [Running Experiments](#running-experiments).
+
+### Docker
+
+Alternatively you can use docker to deploy a ColChain node.
+
+1. Edit the `config.json` file at the root of this repository.
+
+2. Start the ColChain node on http://localhost:8080 using:
+
+   ```bash
+   docker compose up
+   ```
+
 # Status
 ColChain is currently implemented as a prototype used for experiments in the ColChain paper. We are working on creating making the following features available in ColChain:
 * Different RDF compression techniques
